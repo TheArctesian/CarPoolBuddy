@@ -6,4 +6,3 @@ node_modules
 .env
 .env.*
 !.env.example
-firebase.ts
