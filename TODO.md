@@ -26,7 +26,7 @@
 
 ### In Progress
 
-- [ ] SetUp frontend
+- [ ] Figure out how backend architecture will work. aka get alans boilerplate.
 
 ### Done ✓
 
