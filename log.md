@@ -55,3 +55,14 @@ Format:
 <strong>Description: </strong> After carful consideration with lagos I will learn and build the app in dart.
 
 <hr>
+
+
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 18:30 - 19:48
+<br>
+<strong>Date: </strong> 21/1/2021
+<br>
+<strong>Description: </strong> Jesus it is difficult to set up dart but I found a bunch of good fireship tutorials on dart so excited to get building
+
+<hr>
