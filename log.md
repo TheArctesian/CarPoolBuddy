@@ -44,3 +44,14 @@ Format:
 <strong>Description: </strong> I am now starting to regret decision as this might be best done in a web app also i am confused in how I will structure backend. But I updated the TODO for a cleaner road map.
 
 <hr>
+
+
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 09:45 - 10:10
+<br>
+<strong>Date: </strong> 21/1/2021
+<br>
+<strong>Description: </strong> After carful consideration with lagos I will learn and build the app in dart.
+
+<hr>

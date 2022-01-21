@@ -30,6 +30,6 @@
 
 ### Done ✓
 
-- [x] Init firebase
-- [x] SetUp TODO
-- [x] Init svelteKit
+- [x] ~~Init firebase~~
+- [x] ~~SetUp TODO~~
+- [x] ~~Init svelteKit~~
