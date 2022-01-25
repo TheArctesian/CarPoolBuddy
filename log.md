@@ -45,7 +45,6 @@ Format:
 
 <hr>
 
-
 <strong>Name: </strong> Stephen
 <br>
 <strong>Time: </strong> 09:45 - 10:10
@@ -56,7 +55,6 @@ Format:
 
 <hr>
 
-
 <strong>Name: </strong> Stephen
 <br>
 <strong>Time: </strong> 18:30 - 19:48
@@ -64,5 +62,15 @@ Format:
 <strong>Date: </strong> 21/1/2021
 <br>
 <strong>Description: </strong> Jesus it is difficult to set up dart but I found a bunch of good fireship tutorials on dart so excited to get building
+
+<hr>
+
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 11:30 - 12:48
+<br>
+<strong>Date: </strong> 25/1/2021
+<br>
+<strong>Description: </strong> Followed firebase to init some dependencies
 
 <hr>
