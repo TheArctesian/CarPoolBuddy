@@ -3,9 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_performance/firebase_performance.dart';
-FirebaseAnalytics anal;
 void main() {
-  anal = FirebaseAnalytics();
+  FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   runApp(MaterialApp(
     initialRoute: '/',
     routes: {
