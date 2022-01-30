@@ -3,8 +3,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_performance/firebase_performance.dart';
+
+
+
 void main() {
-  FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+  // FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   runApp(MaterialApp(
     initialRoute: '/',
     routes: {
@@ -15,7 +18,7 @@ void main() {
     },
   ));
 }
-
+ 
 class HomeRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -51,6 +54,30 @@ class LoginRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Center(
+        // login form 
+        child: Column(
+          children: <Widget>[
+            Text('Login'),
+            TextField(),
+            TextField(),
+            RaisedButton(
+              child: Text('Back'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/');
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class AddRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: Text("Click Me Page"),
         backgroundColor: Colors.green,
@@ -67,25 +94,21 @@ class LoginRoute extends StatelessWidget {
   }
 }
 
-class AddRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Tap Me Page"),
-        backgroundColor: Colors.green,
-      ),
-    );
-  }
-}
-
 class ManageRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tap Me Page"),
+        title: Text("Click Me Page"),
         backgroundColor: Colors.green,
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Back!'),
+        ),
       ),
     );
   }

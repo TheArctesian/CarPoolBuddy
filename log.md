@@ -74,3 +74,13 @@ Format:
 <strong>Description: </strong> Followed firebase to init some dependencies
 
 <hr>
+
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 19:00 - 20:00
+<br>
+<strong>Date: </strong> 30/1/2021
+<br>
+<strong>Description: </strong> Kinda starting to get the hang of this, got the web version sorted next will be logins in with google then figuring out how objects work in dart
+
+<hr>
