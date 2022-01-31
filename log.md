@@ -84,3 +84,13 @@ Format:
 <strong>Description: </strong> Kinda starting to get the hang of this, got the web version sorted next will be logins in with google then figuring out how objects work in dart
 
 <hr>
+
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 11:00 - 11:30
+<br>
+<strong>Date: </strong> 31/1/2021
+<br>
+<strong>Description: </strong> I though doing the auth would be kinda a short task but the guide I followed was 47 pages longs and I fucked up like 17 times and it still is not working I think I am going to have to do a reset on the project eventually
+
+<hr>

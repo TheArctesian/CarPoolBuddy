@@ -49,7 +49,16 @@ class HomeRoute extends StatelessWidget {
     );
   }
 }
-
+class SignInScreen extends StatefulWidget {
+  @override
+  _SignInScreenState createState() => _SignInScreenState();
+}
+class _SignInScreenState extends State<SignInScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
 class LoginRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
