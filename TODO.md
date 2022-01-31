@@ -21,6 +21,8 @@
 - [ ] Vehicle Class
 - [ ] User Class
 
+<hr>
+
 ### In Progress
 
 **Front end**
@@ -31,6 +33,8 @@
 
 - [ ] Allow users to sign up with their Google email account
 - [ ] Allow users to sign in with the Google email account
+
+<hr>
 
 ### Done ✓
 
