@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "672967801268",
+    "project_id": "carpoolbudy",
+    "storage_bucket": "carpoolbudy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672967801268:android:ba768af76fd8b93da65ae1",
+        "android_client_info": {
+          "package_name": "cis.carPoolBudy_Arctesian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672967801268-31cjrv8ldafd09k2esjh3q35t4iqub1u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cis.carPoolBudy_Arctesian",
+            "certificate_hash": "b9f883eb2cef2efe70139634088d2fe07a0f1037"
+          }
+        },
+        {
+          "client_id": "672967801268-j1n8stmn74sn131u752pv3hh0nuge0mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYyHwWwhftGpPjCylZXO51f1_FDOebePU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672967801268-j1n8stmn74sn131u752pv3hh0nuge0mg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "672967801268-6vi9btc6agnqprjkp95rpqusg34ig6of.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.take2"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672967801268:android:9ad2798ca10372b7a65ae1",
+        "android_client_info": {
+          "package_name": "com.example.take2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672967801268-j1n8stmn74sn131u752pv3hh0nuge0mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYyHwWwhftGpPjCylZXO51f1_FDOebePU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672967801268-j1n8stmn74sn131u752pv3hh0nuge0mg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "672967801268-6vi9btc6agnqprjkp95rpqusg34ig6of.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.take2"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
