@@ -1,8 +1,9 @@
-import 'dart:async';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:provider/provider.dart';
+import 'package:take2/provider/GoogleAuth.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,18 +21,16 @@ class MyApp extends StatelessWidget {
   get center => null;
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: _title,
-      theme:
-          ThemeData(brightness: Brightness.dark, primaryColor: Colors.blueGrey),
-      themeMode: ThemeMode.dark,
-      home: MyStatefulWidget(),
-    );
-  }
+  Widget build(BuildContext context) => ChangeNotifierProvider(
+      create: (context) => GoogleAuth(),
+      child: MaterialApp(
+        title: _title,
+        theme: ThemeData(
+            brightness: Brightness.dark, primaryColor: Colors.blueGrey),
+        themeMode: ThemeMode.dark,
+        home: MyStatefulWidget(),
+      ));
 }
-
-class _center {}
 
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
@@ -44,7 +43,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   late GoogleMapController mapController;
 
-  final LatLng _center = const LatLng(45.521563, -122.677433);
 
   void _onMapCreated(GoogleMapController controller) {
     mapController = controller;
@@ -52,15 +50,32 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
+
+  static final List<Widget> _widgetOptions = <Widget>[
+    Container(
+      child: const GoogleMap(
+        initialCameraPosition: CameraPosition( 
+          target: LatLng(22.3193, 114.1694), // Hong Kong
+          zoom: 11.0,
+        ),
+      ),
     ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    Center(
+          child: ElevatedButton.icon(
+              onPressed: () {
+                // final provider = Provider.of<GoogleAuth>(context, listen: false);
+                // provider.googleLogin();
+              },
+              icon: const FaIcon(FontAwesomeIcons.google, color: Colors.white),
+              label: const Text('Sign in with Google'),
+              //change background color 
+              style: ElevatedButton.styleFrom(
+                      primary: Colors.green,
+                      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)),
+          ))
+      ),   
   ];
 
   void _onItemTapped(int index) {

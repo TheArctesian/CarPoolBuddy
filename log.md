@@ -97,10 +97,20 @@ Format:
 
 <strong>Name: </strong> Stephen
 <br>
-<strong>Time: </strong> 11:00 - 4:30
+<strong>Time: </strong> 11:00 - 15:30
 <br>
 <strong>Date: </strong> 2/2/2022
 <br>
 <strong>Description: </strong> I understand slightly still need to figure out how abstraction works in this but i am starting to build steam, I will take a little break maybe an hour or so then come back
+
+<hr>
+
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 20:00 - 23:00
+<br>
+<strong>Date: </strong> 2/2/2022
+<br>
+<strong>Description: </strong> inited google auth and google maps api
 
 <hr>

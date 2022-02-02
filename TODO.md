@@ -27,7 +27,11 @@
 
 **Front end**
 
-- [ ] Sign in and sign up page
+- [ ] Add location for things on map
+- [ ] Add Vehicle
+- [ ] Vehicle Profile
+- [ ] Vehicle Info page
+- [ ] Ride search page
 
 **Overall Goals**
 
@@ -38,7 +42,17 @@
 
 ### Done ✓
 
+**Front end**
+
+- [x] ~~Sign in and sign up page~~
+- [x] ~~Google Maps~~
+
+**Backend**
+
 - [x] ~~Init firebase~~
+
+**Overall**
+
 - [x] ~~SetUp TODO~~
 - [x] ~~Init svelteKit~~
 - [x] ~~Init dart~~

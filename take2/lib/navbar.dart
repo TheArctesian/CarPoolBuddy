@@ -1,9 +1,14 @@
 import 'dart:async';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-void main() => runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -16,26 +21,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       title: _title,
-      theme: ThemeData(
-    brightness: Brightness.dark,
-    primaryColor: Colors.blueGrey
-  ),
-  themeMode: ThemeMode.dark,
-  home: GoogleMap(
-          onMapCreated: _onMapCreated,
-          initialCameraPosition: CameraPosition(
-            target: LatLng(0, 0),
-            zoom: 11.0,
-          ),
-  ),
+      theme:
+          ThemeData(brightness: Brightness.dark, primaryColor: Colors.blueGrey),
+      themeMode: ThemeMode.dark,
+      home: MyStatefulWidget(),
     );
   }
 }
 
-class _center {
-}
+class _center {}
 
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
@@ -44,10 +40,9 @@ class MyStatefulWidget extends StatefulWidget {
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
 }
 
-
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-   late GoogleMapController mapController;
+  late GoogleMapController mapController;
 
   final LatLng _center = const LatLng(45.521563, -122.677433);
 
@@ -57,7 +52,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
+  static List<Widget> _widgetOptions = <Widget>[
     Text(
       'Index 0: Home',
       style: optionStyle,
@@ -76,26 +71,26 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.grey.shade700,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.location_on),
-            label: 'Maps',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined),
-            label: 'Account',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
-      ),
-    );
+      return Scaffold(
+        body: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.grey.shade700,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.location_on),
+              label: 'Maps',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle_outlined),
+              label: 'Account',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.amber[800],
+          onTap: _onItemTapped,
+        ),
+      );
+    }
   }
-}
