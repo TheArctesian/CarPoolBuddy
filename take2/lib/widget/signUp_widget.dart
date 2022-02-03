@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:take2/provider/googleAuth.dart';
 
 class signUp extends StatelessWidget {
+  signUp(Type myStatefulWidget);
+
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
       create: (context) => GoogleAuth(),
