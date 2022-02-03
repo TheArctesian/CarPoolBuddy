@@ -4,10 +4,14 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:take2/provider/GoogleAuth.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'firebase_options.dart';
+import './widget/signUp_widget.dart' as SignUpWidget;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(MyApp());
 }
 
@@ -18,8 +22,6 @@ class MyApp extends StatelessWidget {
 
   get _onMapCreated => null;
 
-  get center => null;
-
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
       create: (context) => GoogleAuth(),
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             brightness: Brightness.dark, primaryColor: Colors.blueGrey),
         themeMode: ThemeMode.dark,
-        home: MyStatefulWidget(),
+        home: const MyStatefulWidget(),
       ));
 }
 
@@ -60,22 +62,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ),
       ),
     ),
-    Center(
-          child: ElevatedButton.icon(
-              onPressed: () {
-                // final provider = Provider.of<GoogleAuth>(context, listen: false);
-                // provider.googleLogin();
-              },
-              icon: const FaIcon(FontAwesomeIcons.google, color: Colors.white),
-              label: const Text('Sign in with Google'),
-              //change background color 
-              style: ElevatedButton.styleFrom(
-                      primary: Colors.green,
-                      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-          ))
-      ),   
+    SignUpWidget.signUp(MyStatefulWidget),  
   ];
 
   void _onItemTapped(int index) {
@@ -103,7 +90,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.green,
         onTap: _onItemTapped,
       ),
     );

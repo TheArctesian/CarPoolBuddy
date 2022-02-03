@@ -4,4 +4,4 @@ To run make sure you have flutter installed and flutter pub install packages the
 
 `flutter run -d web-server`
 
-AIzaSyBar58X6Z_VGSZsvolVxAxgPwD3yipvr04
+cd into take2 and `flutter run`
