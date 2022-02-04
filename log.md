@@ -114,3 +114,15 @@ Format:
 <strong>Description: </strong> inited google auth and google maps api
 
 <hr>
+
+<hr>
+
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 11:00 - 12:00
+<br>
+<strong>Date: </strong> 4/2/2022
+<br>
+<strong>Description: </strong> I solid day of ignoring this shit and I have got google auth working and saved the data to firestore. I am having problems getting that data to transfer between files so I am just going to get off my toilet and take a break.
+
+<hr>

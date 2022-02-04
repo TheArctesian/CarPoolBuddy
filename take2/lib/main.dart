@@ -4,8 +4,10 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:take2/provider/GoogleAuth.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:take2/widget/accountPage.dart';
 import 'firebase_options.dart';
 import './widget/signUp_widget.dart' as SignUpWidget;
+import './widget/accountPage.dart' as AccountPage;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -63,6 +65,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
     ),
     SignUpWidget.signUp(MyStatefulWidget),  
+    AccountPage.accountPage(MyStatefulWidget),
+
   ];
 
   void _onItemTapped(int index) {
@@ -73,6 +77,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -88,8 +93,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             icon: Icon(Icons.account_circle_outlined),
             label: 'Account',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle_outlined),
+            label: 'Account',
+          ),
         ],
         currentIndex: _selectedIndex,
+        showUnselectedLabels: false,
         selectedItemColor: Colors.green,
         onTap: _onItemTapped,
       ),

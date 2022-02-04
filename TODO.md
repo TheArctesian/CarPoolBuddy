@@ -19,7 +19,6 @@
 **Backend**
 
 - [ ] Vehicle Class
-- [ ] User Class
 
 <hr>
 
@@ -32,11 +31,9 @@
 - [ ] Vehicle Profile
 - [ ] Vehicle Info page
 - [ ] Ride search page
+- [ ] Display User info 
 
 **Overall Goals**
-
-- [ ] Allow users to sign up with their Google email account
-- [ ] Allow users to sign in with the Google email account
 
 <hr>
 
@@ -49,6 +46,8 @@
 
 **Backend**
 
+- [x] ~~Allow users to sign up with their Google email account~~
+- [x] ~~Save User to firebase~~
 - [x] ~~Init firebase~~
 
 **Overall**
