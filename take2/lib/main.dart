@@ -56,14 +56,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
   static final List<Widget> _widgetOptions = <Widget>[
-    Container(
-      child: const GoogleMap(
-        initialCameraPosition: CameraPosition( 
-          target: LatLng(22.3193, 114.1694), // Hong Kong
-          zoom: 11.0,
-        ),
-      ),
-    ),
+    
     SignUpWidget.signUp(MyStatefulWidget),  
     AccountPage.accountPage(MyStatefulWidget),
 
